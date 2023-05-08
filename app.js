@@ -5,16 +5,21 @@ var form = document.querySelector('#form');
 function add() {
   let newdiv = document.createElement('div');
   newdiv.setAttribute('id', 'newdiv');
-  newdiv.setAttribute('class', 'm-2 d-flex justify-content-center bg-light');
+  newdiv.setAttribute(
+    'class',
+    'mx-5 mt-2 d-flex justify-content-between bg-light align-items-center '
+  );
+  // newdiv.setAttribute('style', 'position:relative; left:-80px ');
   document.body.appendChild(newdiv);
   var inputValue = document.querySelector('#input').value;
 
   newdiv.innerHTML =
-    `<span id= 'result' >` +
+    `<input class="form-check-input mx-5" type="checkbox" value="" id="flexCheckDefault">
+    <span id= 'result' class="mx-3" >` +
     inputValue +
     '</span>' +
     `
-    <button id="delete">
+    <button id="delete" class="mx-5 my-3  " >
     <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
