@@ -12,7 +12,6 @@ function add() {
   // newdiv.setAttribute('style', 'position:relative; left:-80px ');
   document.body.appendChild(newdiv);
   var inputValue = document.querySelector('#input').value;
-
   newdiv.innerHTML =
     `<input class="form-check-input mx-5" type="checkbox" value="" id="flexCheckDefault">
     <span id= 'result' class="mx-3" >` +
@@ -36,12 +35,23 @@ function add() {
           />
         </svg>
       </button>
+
       `;
+  function delfunc() {
+    document.body.removeChild(newdiv);
+  }
+  const del = newdiv.querySelector('#delete');
+  del.addEventListener('click', delfunc);
 }
 
 function handleForm(event) {
   event.preventDefault();
 }
-
 button.addEventListener('click', add);
 form.addEventListener('submit', handleForm);
+
+// const del = document.newdiv.querySelector('#delete');
+//   del.addEventListener('click', delfunc);
+//   function delfunc() {
+//     document.removeChild(newdiv);
+//   }
