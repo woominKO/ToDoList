@@ -49,9 +49,3 @@ function handleForm(event) {
 }
 button.addEventListener('click', add);
 form.addEventListener('submit', handleForm);
-
-// const del = document.newdiv.querySelector('#delete');
-//   del.addEventListener('click', delfunc);
-//   function delfunc() {
-//     document.removeChild(newdiv);
-//   }
